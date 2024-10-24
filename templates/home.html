@@ -10,15 +10,23 @@
                 height: 360px;
                 width:100%;
                 object-fit:cover;
+                margin-bottom:14px;
             }
         </style>
     </head>
     <body>
+        {% include "nav.html" %}
+        <img class="img-fluid" id="banner" src="\static\img_banner.webp" height="320">
         <div class="container">
         <h1 class="text-center mt-2 mb-4">Job Portel</h1>
-        <img class="img-fluid" id="banner" src="\static\img_banner.webp" height="320">
         <h2 class="text-center mt-2 mb-4">About this Portel</h2>
+        <div class="row" style="margin-bottom:16px">
+        <div class="col-md-6">
         <p class="lead">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.</p>
+        </div>
+        <div class="d-none d-md-block col-md-6">
+            <img src="/static/people.avif" style="height:320px; border-radius:4px; ">
+        </div>
         <h2 class="text-center mt-2 mb-4">Job Openings<h2>
             <p>
                 {% for job in jobs %}
@@ -31,5 +39,6 @@
             <p class="mt-4">Copyright 2020.this</p>
         </div>
     </div>
+    {% include "footer.html" %}
     </body>
 </html>
